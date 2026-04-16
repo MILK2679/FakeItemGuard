@@ -1,0 +1,13 @@
+# FakeItemGuard 配置
+
+# 扫描间隔(tick)。20 tick = 1 秒。越小越灵敏,但也越费。推荐 5。
+scan-interval-ticks: 5
+
+# 连续命中多少次"飞行中主手为空"才执行 resync。
+# 实际最长容忍时间 = scan-interval-ticks * hit-threshold 个 tick
+# 默认 5 * 2 = 10 tick = 0.5s
+# 调大 → 更不容易误伤正常切物品的玩家;调小 → 更快压制作弊
+hit-threshold: 2
+
+# 是否记录 resync 日志。排查阶段建议开,稳定后可关掉。
+log-resync: false
